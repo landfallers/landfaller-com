@@ -1,0 +1,61 @@
+
+  
+    const magazinePostsPerPage = 3
+    const magazinePosts = query.data.magazines.edges.length
+    const magazinePages = Math.ceil( magazinePosts / magazinePostsPerPage )
+    Array.from( { length: magazinePages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `/magazines/` : `/magazines/${i + 1}`,
+        component: path.resolve("./src/templates/magazines.js"),
+        context: {
+          skip: magazinePostsPerPage * i,
+          limit: magazinePostsPerPage,
+          currentPage: i + 1,
+          isFirst: i + 1 == 1,
+          isLast: i + 1 == magazinePages,
+        }
+      })
+    })
+  
+  
+    
+    query.data.category.group.map(({ fieldValue, totalCount}) => {
+      const categoryPostsPerPage = 2
+      const categoryPosts = totalCount
+      const categoryPages = Math.ceil( categoryPosts / categoryPostsPerPage )
+      Array.from( { length: categoryPages }).forEach((_, i) => {
+        createPage({
+          path: i === 0 ? `/category/${fieldValue}/` : `/magazines/category/${fieldValue}/${i + 1}/`,
+          component: path.resolve("./src/templates/category.js"),
+          context: {
+            category: fieldValue,
+            totalCount,
+            skip: categoryPostsPerPage * i,
+            limit: categoryPostsPerPage,
+            currentPage: i + 1,
+            isFirst: i + 1 == 1,
+            isLast: i + 1 == categoryPages,
+          }
+        })
+      })   
+    })
+    query.data.tags.group.map(({ fieldValue, totalCount}) => {
+      const tagsPostsPerPage = 3
+      const tagsPosts = totalCount
+      const tagsPages = Math.ceil( tagsPosts / tagsPostsPerPage )
+      Array.from( { length: tagsPages }).forEach((_, i) => {
+        createPage({
+          path: i === 0 ? `/tags/${fieldValue}/` : `/tags/${fieldValue}/${i + 1}/`,
+          component: path.resolve("./src/templates/tags.js"),
+          context: {
+            tag: fieldValue,
+            totalCount,
+            skip: tagsPostsPerPage * i,
+            limit: tagsPostsPerPage,
+            currentPage: i + 1,
+            isFirst: i + 1 == 1,
+            isLast: i + 1 == tagsPages,
+          }
+        })
+      })
+    })

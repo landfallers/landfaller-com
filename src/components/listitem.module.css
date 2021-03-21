@@ -1,0 +1,80 @@
+.wrapper {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  padding: 16px;
+}
+.header {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.date {
+  margin-left: 5px;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+.footerbox {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.tagbox {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.tag {
+  margin-right: 4px;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tag:not(:last-child)::after {
+  content: ",";
+  margin-right: 4px;
+}
+
+.categorybox {
+  display: flex;
+  align-items: center;
+}
+.categorycolor {
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.categorytype {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.87);
+  margin-left: 8px;
+}
+.pdfbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 40px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.pdficon {
+  display: inline-block;
+  vertical-align: bottom;
+  height: 16px;
+  width: 16px;
+}

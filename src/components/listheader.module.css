@@ -1,0 +1,34 @@
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px 0 20px;
+}
+.title {
+    font-size: 2.5rem;
+    font-weight: bolder;
+    display: block;
+    color: rgb(0, 39, 122);
+}
+
+.discriptionBox {
+    margin-top: 20px;
+    width:80%;
+    align-self: flex-end;
+    font-size: 0.7rem;
+    line-height: 1.4;
+
+}
+
+.count {
+    margin-top: 2px;
+    align-self: flex-start;
+    font-size: 14px;
+    border-bottom: 4px solid rgba(0, 255, 255, 0.3);
+}
+
+@media (max-width:576px) {
+    .title {
+        font-size: 1.6rem;
+    }
+}

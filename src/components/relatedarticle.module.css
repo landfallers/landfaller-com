@@ -1,0 +1,36 @@
+.relatedWrapper {
+  padding: 32px;
+  background-color: #ffffff;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+.relatedArticle {
+  display: block;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-bottom: 8px;
+  padding-left: 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+}
+.relatedPost {
+  padding: 10px 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  display: flex;
+}
+.categoryIcon {
+  display: none;
+}
+.relatedContent {
+  box-sizing: inherit;
+}
+.relatedTitle {
+  font-size: 1.02rem;
+  font-weight: bolder;
+  margin-bottom: 2px;
+  color: rgba(0, 0, 0, 0.87);
+}
+.relatedAttribute {
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.6);
+  padding-left: 8px;
+}

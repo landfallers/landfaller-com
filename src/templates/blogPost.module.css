@@ -1,0 +1,142 @@
+.contentwrapper {
+  padding: 32px;
+  background-color: #ffffff;
+  margin-top: 12px;
+  margin-bottom: 24px;
+}
+
+.top {
+  padding-left: 10px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 14px;
+  line-height: 1.3;
+}
+.title {
+  color: rgba(0, 0, 0, 0.87);
+  font-size: 32px;
+  font-weight: bolder;
+  margin: 4px 0 4px 0;
+  word-break: break-all;
+}
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.laboname {
+  box-sizing: inherit;
+}
+.categorybox {
+  display: flex;
+  align-items: center;
+}
+.categorycolor {
+  display: inline-block;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+.categorytype {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.87);
+  margin-left: 8px;
+}
+
+.categorytype a {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.slash::before {
+  content: " / ";
+  font-size: 120%;
+  font-weight: bold;
+}
+.tagbox {
+  display: inline-block;
+}
+
+.tag {
+  margin-right: 4px;
+  color: inherit;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.tag:not(:last-child)::after {
+  content: ",";
+  margin-right: 4px;
+}
+.pdfbox::before {
+  content: "・";
+  color: black;
+}
+.pdfbox {
+  display: inline-block;
+}
+.pdfbox a {
+  color: rgba(0, 0, 0, 0.6);
+}
+.pdf {
+  display: inline-block;
+  height: 25px;
+}
+
+.description {
+  max-width: 350px;
+  font-size: 0.8em;
+  line-height: 1.1;
+}
+
+.intervieweebox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.teacherpic {
+  width: 160px;
+  height: 200px;
+  object-fit: contain;
+}
+.description {
+  padding: 4px;
+}
+.preface {
+  margin: 12px 0 12px 36px;
+  font-size: 0.9em;
+}
+.bar {
+  margin: 20px 0;
+}
+.body h2 {
+  margin: 12px 0 4px 4px;
+  font-size: 1.3em;
+  font-weight: bolder;
+}
+.body p {
+  line-height: 1.5;
+  font-size: 1.1em;
+  font-weight: lighter;
+  margin-bottom: 12px;
+}
+
+.body ol {
+  margin-left: 30px;
+  margin-bottom: 12px;
+}
+.body ul {
+  margin-left: 30px;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+  .intervieweebox {
+    align-items: center;
+    flex-direction: column-reverse;
+    margin-bottom: 12px;
+  }
+}

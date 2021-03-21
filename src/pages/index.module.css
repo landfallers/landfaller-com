@@ -1,0 +1,113 @@
+/*top*/
+
+.top {
+  position: relative;
+}
+.pic {
+  height: 450px;
+}
+.pic img {
+  object-position: left top;
+  object-fit: cover;
+}
+
+.top .shadow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(70deg, rgb(92, 172, 134) 50%, rgba(0, 0, 0, 0));
+}
+.top .title {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 30%;
+  display: flex;
+}
+
+.top .title h1 {
+  align-self: center;
+  justify-self: center;
+  padding: 30px;
+  color: #ffffff;
+  font-size: 40px;
+  text-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .pic {
+    height: 300px;
+  }
+  .top .title h1 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 500px) {
+  .pic {
+    height: 250px;
+  }
+  .top .title {
+    right: 10%;
+  }
+  .top .title h1 {
+    font-size: 20px;
+  }
+}
+
+.aboutUs {
+  position: relative;
+}
+.pic {
+  height: 450px;
+}
+.pic img {
+  object-position: left top;
+  object-fit: cover;
+}
+
+.aboutUs .shadow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(70deg, rgb(92, 172, 134) 50%, rgba(0, 0, 0, 0));
+}
+.aboutUs .title {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 30%;
+  display: flex;
+}
+
+.aboutUs .title h1 {
+  align-self: center;
+  justify-self: center;
+  padding: 30px;
+  color: #ffffff;
+  font-size: 40px;
+  text-shadow: 0 0 20px rgb(0, 0, 0);
+}
+
+@media (max-width: 768px) {
+  .pic {
+    height: 300px;
+  }
+  .aboutUs .title h1 {
+    font-size: 25px;
+  }
+}
+@media (max-width: 500px) {
+  .pic {
+    height: 250px;
+  }
+  .aboutUs .title {
+    right: 10%;
+  }
+  .aboutUs .title h1 {
+    font-size: 20px;
+  }
+}

@@ -1,0 +1,33 @@
+.nav {
+    justify-content: center;
+}
+.pagination {
+	margin: 12px;
+	list-style: none;
+	display: flex;
+}
+
+.pagination .next {
+	margin-left: auto;
+}
+
+.pagination a {
+	width: 9em;
+	padding: 0.5em 1em;
+	border-radius: 1em;
+	background-color: #477294;
+	color: #fff;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+}
+.pagination .next a {
+	justify-content: flex-end;
+}
+
+.pagination .prev [class*="fa-"] {
+	margin-right: 10px;
+}
+.pagination .next [class*="fa-"] {
+	margin-left: 10px;
+}
