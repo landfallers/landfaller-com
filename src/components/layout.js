@@ -13,10 +13,19 @@ export function Layout({ children }) {
       {/* <EyeCatch/> */}
       <Container fluid="lg" as="section">
         <Row>
-          <Col md={9} sm={8} style={{paddingRight: "8px", paddingLeft: "8px"}}>
+          <Col
+            md={9}
+            sm={8}
+            style={{ paddingRight: "8px", paddingLeft: "8px" }}
+          >
             {children}
           </Col>
-          <Col as="aside" md={3} sm={4} style={{paddingRight: "8px", paddingLeft: "8px"}}>
+          <Col
+            as="aside"
+            md={3}
+            sm={4}
+            style={{ paddingRight: "8px", paddingLeft: "8px" }}
+          >
             <Aside />
           </Col>
         </Row>

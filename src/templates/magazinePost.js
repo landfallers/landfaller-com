@@ -8,17 +8,21 @@ import { RelatedArticle } from "../components/relatedarticle";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Button } from "react-bootstrap";
-
-export default function Article({ data }) {
+import { SEO } from "../components/seo";
+export default function Article({ data, location }) {
   const { frontmatter } = data.mdx;
   const image = getImage(frontmatter.facephoto);
   return (
     <Layout>
+          <SEO
+      pagetitle={frontmatter.title}
+      pagedesc={frontmatter.preface}
+      pagepath={location.pathname}
+      />
       <article className={style.contentwrapper}>
         <header>
           <div className={style.top}>LANDFALL Vol.{frontmatter.vol}</div>
           <h1 className={style.title}>{frontmatter.title}</h1>
-
           <div className={style.bottomContainer}>
             <div id={style.categoryBox}>
               <div className={style.categorybox}>
@@ -28,7 +32,7 @@ export default function Article({ data }) {
                 />
                 <div className={style.categorytype}>
                   <Link to={`/category/${frontmatter.category}`}>{frontmatter.category}</Link>
-                  <span class={style.slash} />
+                  <span className={style.slash} />
                   {frontmatter.url ? (
                     <a href={frontmatter.url}>
                       {frontmatter.interviewee} 研究室
@@ -45,7 +49,7 @@ export default function Article({ data }) {
                     style={{ color: "rgba(0,0,0,0.6)", marginRight: "8px" }}
                   />
                   {frontmatter.tags.map((tag) => (
-                    <Link to={`/tags/${tag}`} className={style.tag}>
+                    <Link to={`/tags/${tag}`} className={style.tag} key={`magazinepost-${tag}`}>
                       {tag}
                     </Link>
                   ))}

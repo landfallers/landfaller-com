@@ -13,7 +13,7 @@ export function Pagenation(props) {
     <nav aria-label="pagination" className={style.nav}>
       <ul className={style.pagination}>
         {!pageContext.isFirst && (
-          <li className={style.prev}>
+          <li className={style.prev} key="pagination-prev">
             <Link
               to={
                 pageContext.currentPage === 2
@@ -29,7 +29,7 @@ export function Pagenation(props) {
         )}
 
         {!pageContext.isLast && (
-          <li className={style.next}>
+          <li className={style.next} key="pagination-next">
             <Link
               to={`${props.slug}${pageContext.currentPage + 1}/`}
               rel="next"

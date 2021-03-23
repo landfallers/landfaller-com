@@ -3,11 +3,16 @@ import { graphql } from "gatsby";
 import { Layout } from "../components/layout";
 import { Pagenation } from "../components/pagination";
 import { ListItem } from "../components/listitem";
+import { SEO } from "../components/seo";
 import * as style from "./tags.module.css";
 import { ListHeader } from "../components/listheader";
-export default function blogsList({ data, pageContext }) {
+export default function blogsList({ data, pageContext, location }) {
   return (
     <Layout>
+        <SEO 
+      pagetitle={`CATEGORY: 「${pageContext.tag}`}
+      pagedesc={`「${pageContext.tag}」の記事。`}
+      pagepath={location.pathname}/>
       <div className={style.wrapper}>
         <ListHeader
           pageContext={pageContext}
@@ -19,10 +24,11 @@ export default function blogsList({ data, pageContext }) {
           <ListItem
             items={node.frontmatter}
             slug={node.slug}
+            key={`tags-${node.slug}`}
           />
         ))}
       </div>
-      <Pagenation pageContext={pageContext} slug={`/blogs/`} />
+      <Pagenation pageContext={pageContext} slug={`/tags/${pageContext.tag}/`} />
     </Layout>
   );
 }

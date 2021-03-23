@@ -19,7 +19,7 @@ export function Footer() {
         </div>
         <div className={style.links}>
           <div className={style.brand}>
-            <a href="#">
+            <a href="https://forms.gle/8RDb5DC3qKwHBSQs5">
               <FontAwesomeIcon icon={faDiscord} size="2x" color="#99AAB5" />
             </a>
             <a href="https://twitter.com/LANDFALL_PR?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">

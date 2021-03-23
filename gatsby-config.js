@@ -1,10 +1,12 @@
+const { config } = require("@fortawesome/fontawesome-svg-core");
+require("dotenv").config();
 module.exports = {
   siteMetadata: {
     title: `LANDFALL`,
     description: `東京工業大学生協学生委員会LANDFALLのサイトです。LANDFALLは東工大の研究室紹介冊子LANDFALL誌や毎年新入生に配布するTOKOWALKER誌を作成している組織です。`,
     lang: `ja`,
-    locales: `ja_JP`,
-    siteUrl: `https:landfaller.com`,
+    locale: `ja_JP`,
+    siteUrl: `https://landfaller.com`,
     categoryColor: {
       sos: "#2B439A",
       soe: "#3F9E80",
@@ -26,6 +28,18 @@ module.exports = {
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     "gatsby-plugin-catch-links",
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `LANDFALL|東京工業大学生協学生委員会`,
+        short_name: `LANDFALL`,
+        start_url: `/`,
+        background_color: `#e9e9e9`,
+        theme_color: `#477294`,
+        display: `standalone`,
+        icon: `src/images/landfall-logo.png`
+      }
+    },
     {
       resolve: `gatsby-plugin-mdx`,
       options: {

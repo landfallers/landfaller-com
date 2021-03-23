@@ -77,7 +77,7 @@ export function ListItem(props) {
               style={{ color: "rgba(0,0,0,0.6)", marginRight: "8px" }}
             />
             {items.tags.map((tag) => (
-              <Link to={`/tags/${tag}/`} className={style.tag}>
+              <Link to={`/tags/${tag}/`} className={style.tag} key={tag}>
                 {tag}
               </Link>
             ))}

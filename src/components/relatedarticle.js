@@ -29,7 +29,7 @@ export function RelatedArticle(props) {
       <h2 className={style.relatedArticle}>最新記事</h2>
       <div>
         {posts.map(({node}) => (
-          <article className={style.relatedPost}>
+          <article className={style.relatedPost} key={`related-${node.frontmatter.title}`}>
             <div className={style.categoryIcon}>
               {/*将来的にカテゴリーのアイコンを表示させる*/}
             </div>

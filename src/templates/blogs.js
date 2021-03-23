@@ -1,13 +1,19 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../components/layout";
+import { SEO } from "../components/seo";
 import { Pagenation } from "../components/pagination";
 import { ListItem } from "../components/listitem";
 import * as style from "./blogs.module.css";
 import { ListHeader } from "../components/listheader";
-export default function blogsList({ data, pageContext }) {
+export default function blogsList({ data, pageContext,location }) {
   return (
     <Layout>
+      <SEO
+      pagetitle="BLOG"
+      pagedesc="LANDFALL編集委員会の部員が作成しているブログです。新歓の情報や大学のこと、landfall部員の日常についていろいろ記事にしてみました。"
+      pagepath={location.pathname}
+      />
       <div className={style.wrapper}>
         <ListHeader
           pageContext={pageContext}
@@ -18,6 +24,7 @@ export default function blogsList({ data, pageContext }) {
           <ListItem
             items={node.childMdx.frontmatter}
             slug={node.childMdx.slug}
+            key={`blogs-${node.childMdx.slug}`}
           />
         ))}
       </div>

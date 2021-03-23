@@ -4,12 +4,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags } from "@fortawesome/free-solid-svg-icons";
 import { graphql, Link } from "gatsby";
 import { Layout } from "../components/layout";
+import { SEO } from "../components/seo";
 import { RelatedArticle} from "../components/relatedarticle";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-export default function Article({ data }) {
+export default function Article({ data, location }) {
   const { frontmatter } = data.mdx;
   return (
     <Layout>
+      <SEO
+      pagetitle={frontmatter.title}
+      pagedesc={frontmatter.preface}
+      pagepath={location.pathname}
+      />
       <article className={style.contentwrapper}>
         <header>
           <div className={style.top}>{frontmatter.date}に投稿</div>
@@ -23,7 +29,7 @@ export default function Article({ data }) {
                     style={{ color: "rgba(0,0,0,0.6)", marginRight: "8px" }}
                   />
                   {frontmatter.tags.map((tag) => (
-                    <Link to={`/tags/${tag}`} className={style.tag}>
+                    <Link to={`/tags/${tag}`} className={style.tag} key={`blogpost-${tag}`}>
                       {tag}
                     </Link>
                   ))}
@@ -49,6 +55,7 @@ export const query = graphql`
         date(formatString: "YYYY年MM月DD日")
         title
         tags
+        preface
       }
       body
     }
