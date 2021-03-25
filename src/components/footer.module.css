@@ -24,7 +24,6 @@
 }
 .logobox {
     width:200px;
-
 }
 .twitter {
     width: 64px;
@@ -44,9 +43,6 @@
 }
 .toalign a:hover {
     color: rgb(146, 146, 146);
-}
-.logo {
-    box-sizing: inherit;
 }
 .copyright {
     font-size: 0.8rem;

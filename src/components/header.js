@@ -2,16 +2,15 @@ import React from "react";
 import { Link } from "gatsby";
 import { Nav, Navbar } from "react-bootstrap";
 import * as style from "./header.module.css";
+import Logo from "../images/logo.svg";
 export function Header() {
   return (
     <header className="bg-info">
       <Navbar expand="md" variant="dark">
-        <Navbar.Brand href="/">
-          <img
-            src={`/images/landfall-title2.svg`}
-            className={style.logo}
-            alt="landfall"
-          />
+        <Navbar.Brand href="/" style={{marginLeft: "15px"}}>
+          <div className={style.logo}>
+           <Logo/>
+          </div>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarResponsive" />
         <Navbar.Collapse id="navbarResponsive">

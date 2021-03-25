@@ -28,8 +28,7 @@
 }
 
 .categoryicon {
-  display: inline;
-  height: 1em;
+  width: 1.2rem;
   margin-bottom: 3px;
 }
 .categorycolor {

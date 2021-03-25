@@ -4,17 +4,14 @@ import * as style from "./footer.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCopyright } from "@fortawesome/free-regular-svg-icons";
 import { faDiscord, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import Logo from "../images/logo.svg";
 export function Footer() {
   return (
     <footer className={style.footer}>
       <div className={style.wrapper}>
         <div className={style.logobox}>
           <Link to={`/`}>
-            <img
-              src={`/images/landfall-title2.svg`}
-              className={style.logo}
-              alt="landfall"
-            />
+              <Logo/>
           </Link>
         </div>
         <div className={style.links}>
