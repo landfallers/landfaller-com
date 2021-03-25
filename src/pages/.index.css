@@ -1,0 +1,174 @@
+.home h2 {
+    font-size: 40px;
+    margin-left: 100px;
+    padding-bottom: 10px;
+  }
+  .home strong {
+    color: rgb(255, 173, 228);
+  }
+  
+  .home ul {
+    padding-left: 10px;
+  }
+  .home p,
+  li {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  .home li {
+    list-style: none;
+  }
+  .home p::before {
+    content: "　";
+  }
+  .hero {
+    position: relative;
+  }
+  .hero figure {
+    max-height: 100%;
+    height: 550px;
+  }
+  .hero figure img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+  }
+  .hero .shadow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(70deg, rgb(92, 172, 134) 47%, rgba(0, 0, 0, 0));
+  }
+  .hero .title {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  
+    padding: 0 50px 150px 50px;
+  }
+  
+  .hero .title h1 {
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+  
+  .hero .wave {
+    position: absolute;
+    right: 0;
+    bottom: -1px;
+    left: 0;
+    margin: auto;
+    width: 100%;
+  }
+  
+  .textbox {
+    margin: 50px;
+    padding: 50px;
+    width: 70%;
+  }
+  
+  .about {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #00587a;
+    color: azure;
+  }
+  
+  .creed {
+    display: flex;
+    flex-direction: row;
+    background-color: #005358;
+    color: azure;
+  }
+  
+  .publication {
+    background-color: #dddd90;
+    color: #814b7d;
+  }
+  .publication h2 {
+    margin: 0;
+    padding: 60px;
+    text-align: center;
+  }
+  .box {
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  
+  .cardw {
+    position: relative;
+    width: 300px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.16);
+    background-color: rgb(255, 255, 255);
+  }
+  .cardimgw {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .cardw .mask {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      0,
+      rgb(255, 255, 255) 5%,
+      rgba(255, 255, 255, 0.849) 30%,
+      rgba(0, 0, 0, 0) 60%
+    );
+  }
+  .cardw .mask2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+      0,
+      #b9d5e1 5%,
+      #b9d5e1e5 30%,
+      rgba(0, 0, 0, 0) 60%
+    );
+  }
+  .cardw .bodyw {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+  }
+  .cardw h3 {
+    font-weight: bold;
+  }
+  .cardw .desc {
+    color: #000;
+    font-size: 15px;
+    padding: 1em;
+  }
+  .cardw .btn {
+    padding-left: 20px;
+  }
+  .joinus {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #a8634c;
+    color: azure;
+  }
+  .joinus h3 {
+    font-size: 30px;
+  }
+  
