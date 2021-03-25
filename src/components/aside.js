@@ -3,6 +3,7 @@ import { Link, useStaticQuery, graphql } from "gatsby";
 import * as style from "./aside.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags } from "@fortawesome/free-solid-svg-icons";
+import CategoryIcon from "../images/category.svg";
 export function Aside() {
   const data = useStaticQuery(graphql`
     query {
@@ -84,11 +85,8 @@ export function Aside() {
     <div className={style.wrapper}>
       <div className={style.box}>
         <h2 className={style.title}>
-          <img
-            src="/images/category.svg"
-            alt="category"
-            className={style.categoryicon}
-          />
+            <CategoryIcon className={style.categoryicon}/>
+        
           &nbsp;学院から探す
         </h2>
         {categorys.map(({ title, color, url }) => (

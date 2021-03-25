@@ -6,6 +6,11 @@ import { Aside } from "./aside";
 import "./layout.scss";
 import { Col, Container, Row } from "react-bootstrap";
 
+import "@fortawesome/fontawesome-svg-core/styles.css";
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
+
+
 export function Layout({ children }) {
   return (
     <div>

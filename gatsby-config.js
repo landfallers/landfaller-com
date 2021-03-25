@@ -37,7 +37,7 @@ module.exports = {
         background_color: `#e9e9e9`,
         theme_color: `#477294`,
         display: `standalone`,
-        icon: `src/images/landfall-logo.png`
+        icon: `src/images/icon.png`
       }
     },
     {
@@ -54,6 +54,14 @@ module.exports = {
           },
         ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-react-svg`,
+      options: {
+        rule: {
+          include: /images/ 
+        }
+      }
     },
     {
       resolve: "gatsby-source-filesystem",

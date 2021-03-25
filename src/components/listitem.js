@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarTimes } from "@fortawesome/free-regular-svg-icons";
 import { Link, useStaticQuery, graphql } from "gatsby";
+import Pdf  from "../images/PDF.svg";
 export function ListItem(props) {
   const { items } = props;
   const data = useStaticQuery(graphql`
@@ -95,7 +96,7 @@ export function ListItem(props) {
         <div>
           {items.pdf ? (
             <a href={items.pdf.publicURL} className={style.pdfbox}>
-              <img src="/images/PDF.svg" alt="pdf" />
+              <Pdf/>
             </a>
           ) : (
             ``

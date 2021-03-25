@@ -8,13 +8,12 @@ import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import { Button } from "react-bootstrap";
 import { SEO } from "../components/seo";
-
 const IndexPage = ({ location }) => {
   return (
     <div className={style.home}>
       <SEO />
       <Header />
-      <article className={style.wrapper}>
+      <article>
         <section className={style.top}>
           <StaticImage
             src="../images/indexhero.png"
