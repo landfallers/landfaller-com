@@ -21,6 +21,8 @@ const IndexPage = ({ location }) => {
             placeholder="tracedSVG"
             layout="fullWidth"
             quality={40}
+            objectFit="cover"
+            objectPosition="top left"
             className={style.pic}
           />
           <div className={style.shadow}></div>
@@ -54,9 +56,10 @@ const IndexPage = ({ location }) => {
             <StaticImage
               src="../images/landfall-ship.png"
               alt="landfallの船"
-              loading="lazy"
               layout="fullWidth"
               placeholder="tracedSVG"
+              objectFit="contain"
+              objectPosition="center center"
               quality={40}
               className={style.ship}
             />
@@ -76,8 +79,9 @@ const IndexPage = ({ location }) => {
                   src="../images/landfall92.png"
                   alt="landfall92号"
                   placeholder="blurred"
-                  loading="lazy"
                   layout="fullWidth"
+                  objectPosition="center center"
+                  objectFit="contain"
                   quality={100}
                   className={style.pic}
                 />
@@ -96,8 +100,9 @@ const IndexPage = ({ location }) => {
                   src="../images/tokowalker21.png"
                   alt="tokowalker21"
                   placeholder="blurred"
-                  loading="lazy"
                   layout="fullWidth"
+                  objectPosition="center center"
+                  objectFit="contain"
                   quality={100}
                   className={style.pic}
                 />
@@ -121,8 +126,9 @@ const IndexPage = ({ location }) => {
                 src="../images/joinus2.JPG"
                 alt="landfall部員が議論している風景"
                 placeholder="blurred"
-                loading="lazy"
                 layout="fullWidth"
+                objectPosition="top left"
+                objectFit="cover"
                 quality={100}
                 className={style.pic}
               />
@@ -130,8 +136,9 @@ const IndexPage = ({ location }) => {
                 src="../images/joinus1.JPG"
                 alt="landfall部員の作業風景"
                 placeholder="blurred"
-                loading="lazy"
                 layout="fullWidth"
+                objectPosition="center center"
+                objectFit="cover"
                 quality={100}
                 className={style.pic}
               />
@@ -160,9 +167,8 @@ const IndexPage = ({ location }) => {
           src="../images/footer.png"
           alt=""
           placeholder="blurred"
-          loading="lazy"
           layout="fullWidth"
-          quality={50}
+          quality={80}
           className={style.footpic}
         />
       </figure>
