@@ -34,7 +34,7 @@ export function ListItem(props) {
     soc: "情報理工学院",
     ses: "環境・社会理工学院",
     lst: "生命理工学院",
-    ila: "リベラルアーツ教育研究院",
+    ila: "リベラルアーツ研究教育院",
   };
   let key = Object.keys(categorydict).filter((key) => {
     return categorydict[key] === items.category;
@@ -48,7 +48,7 @@ export function ListItem(props) {
       <header>
         {items.vol ? (
           <div className={style.header}>
-            landfall vol.{items.vol}&emsp;{items.interviewee} 研究室
+            LANDFALL vol.{items.vol}&emsp;{items.interviewee} 研究室
           </div>
         ) : (
           <div className={style.header}>

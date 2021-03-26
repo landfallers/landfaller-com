@@ -110,7 +110,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
   query.data.category.group.map(({ fieldValue, totalCount }) => {
-    const categoryPostsPerPage = 2;
+    const categoryPostsPerPage = 20;
     const categoryPosts = totalCount;
     const categoryPages = Math.ceil(categoryPosts / categoryPostsPerPage);
     Array.from({ length: categoryPages }).forEach((_, i) => {
@@ -133,7 +133,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     });
   });
   query.data.tags.group.map(({ fieldValue, totalCount }) => {
-    const tagsPostsPerPage = 3;
+    const tagsPostsPerPage = 20;
     const tagsPosts = totalCount;
     const tagsPages = Math.ceil(tagsPosts / tagsPostsPerPage);
     Array.from({ length: tagsPages }).forEach((_, i) => {

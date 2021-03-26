@@ -64,9 +64,9 @@ export function Aside() {
       url: "/category/生命理工学院",
     },
     {
-      title: "リベラルアーツ教育研究院",
+      title: "リベラルアーツ研究教育院",
       color: colorCode.ila,
-      url: "/category/リベラルアーツ教育研究院",
+      url: "/category/リベラルアーツ研究教育院",
     },
     /*
     {

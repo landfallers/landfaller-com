@@ -25,7 +25,7 @@ export function Footer() {
           </div>
           <div className={style.toalign}>
             <Link to={`/aboutsite/`}>サイトについて</Link>
-            <a href="https://google.com">お問い合わせ</a>
+            <a href="https://docs.google.com/forms/d/1uLCc8xCXiVb0_HLvc_oUmoBjfFfLt54L_x7vHxyfQ4k/viewform?edit_requested=true">お問い合わせ</a>
           </div>
           <div className={style.toalign}>
             <Link to={`/blogs/`}>BLOG</Link>
