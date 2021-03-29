@@ -4,15 +4,14 @@
   margin-top: 12px;
   margin-bottom: 24px;
 }
- 
+
 .bottomContainer {
   display: grid;
   grid-template-areas:
-  "category face"
-  "career face";
+    "category face"
+    "career face";
   grid-template-rows: auto 1fr;
   grid-template-columns: 1fr 160px;
-
 }
 #categoryBox {
   grid-area: category;
@@ -136,7 +135,7 @@
   padding: 5px 0 5px 15px;
   font-size: 1.3em;
   font-weight: bolder;
-  border-left: 5px solid rgba(0, 0, 0, 0.856) ;
+  border-left: 5px solid rgba(0, 0, 0, 0.856);
 }
 .body p {
   color: rgba(0, 0, 0, 0.856);
@@ -149,20 +148,20 @@
 @media (max-width: 800px) {
   .bottomContainer {
     grid-template-areas:
-    "category category"
-    "career face";
+      "category category"
+      "career face";
     grid-template-rows: 1fr auto;
     grid-template-columns: 1fr 160px;
   }
 }
 @media (max-width: 750px) {
-    .bottomContainer {
-      grid-template-areas:
+  .bottomContainer {
+    grid-template-areas:
       "category"
       "face"
       "career";
-      grid-template-rows: 1fr auto;
-      grid-template-columns: 1fr;
-      justify-items: center;
-    }
+    grid-template-rows: 1fr auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
+}

@@ -112,27 +112,6 @@
 .bar {
   margin: 20px 0;
 }
-.body h2 {
-  margin: 12px 0 4px 4px;
-  font-size: 1.3em;
-  font-weight: bolder;
-}
-.body p {
-  line-height: 1.5;
-  font-size: 1.1em;
-  font-weight: lighter;
-  margin-bottom: 12px;
-}
-
-.body ol {
-  margin-left: 30px;
-  margin-bottom: 12px;
-}
-.body ul {
-  margin-left: 30px;
-  margin-bottom: 12px;
-}
-
 @media (max-width: 768px) {
   .intervieweebox {
     align-items: center;
