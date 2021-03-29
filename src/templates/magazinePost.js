@@ -62,7 +62,7 @@ export default function Article({ data, location }) {
                 </div>
               </div>
               <div>
-                {frontmatter.tags ? (
+                {frontmatter.tags.length != 0 ? (
                   <div className={style.tagbox}>
                     <FontAwesomeIcon
                       icon={faTags}
