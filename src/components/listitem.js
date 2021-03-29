@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags } from "@fortawesome/free-solid-svg-icons";
 import { faCalendarTimes } from "@fortawesome/free-regular-svg-icons";
 import { Link, useStaticQuery, graphql } from "gatsby";
-import Pdf  from "../images/PDF.svg";
+import Pdf from "../images/PDF.svg";
 export function ListItem(props) {
   const { items } = props;
   const data = useStaticQuery(graphql`
@@ -72,17 +72,22 @@ export function ListItem(props) {
       </h2>
       <footer className={style.footerbox}>
         <div>
-          <div className={style.tagbox}>
-            <FontAwesomeIcon
-              icon={faTags}
-              style={{ color: "rgba(0,0,0,0.6)", marginRight: "8px" }}
-            />
-            {items.tags.map((tag) => (
-              <Link to={`/tags/${tag}/`} className={style.tag} key={tag}>
-                {tag}
-              </Link>
-            ))}
-          </div>
+          {items.tags.length != 0 ? (
+            <div className={style.tagbox}>
+              <FontAwesomeIcon
+                icon={faTags}
+                style={{ color: "rgba(0,0,0,0.6)", marginRight: "8px" }}
+              />
+              {items.tags.map((tag) => (
+                <Link to={`/tags/${tag}/`} className={style.tag} key={tag}>
+                  {tag}
+                </Link>
+              ))}
+            </div>
+          ) : (
+            ``
+          )}
+
           <div className={style.categorybox}>
             <span
               className={style.categorycolor}
@@ -96,7 +101,7 @@ export function ListItem(props) {
         <div>
           {items.pdf ? (
             <a href={items.pdf.publicURL} className={style.pdfbox}>
-              <Pdf/>
+              <Pdf />
             </a>
           ) : (
             ``
