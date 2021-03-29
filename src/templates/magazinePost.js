@@ -5,13 +5,30 @@ import { faTags } from "@fortawesome/free-solid-svg-icons";
 import { graphql, Link } from "gatsby";
 import { Layout } from "../components/layout";
 import { RelatedArticle } from "../components/relatedarticle";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { Body } from "../components/bodytext.js";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Button } from "react-bootstrap";
 import { SEO } from "../components/seo";
 export default function Article({ data, location }) {
   const { frontmatter } = data.mdx;
   const image = getImage(frontmatter.facephoto);
+  const colorCode = data.site.siteMetadata.categoryColor;
+  const categorydict = {
+    sos: "理学院",
+    soe: "工学院",
+    mct: "物質理工学院",
+    soc: "情報理工学院",
+    ses: "環境・社会理工学院",
+    lst: "生命理工学院",
+    ila: "リベラルアーツ研究教育院",
+  };
+  let key = Object.keys(categorydict).filter((key) => {
+    return categorydict[key] === frontmatter.category;
+  });
+  if (key.length === 0) {
+    key = "blog";
+  }
+  const itemCategoryColor = colorCode[key];
   return (
     <Layout>
       <SEO
@@ -28,7 +45,7 @@ export default function Article({ data, location }) {
               <div className={style.categorybox}>
                 <span
                   className={style.categorycolor}
-                  style={{ background: "#aa5465" }}
+                  style={{ background: itemCategoryColor }}
                 />
                 <div className={style.categorytype}>
                   <Link to={`/category/${frontmatter.category}`}>
@@ -93,9 +110,7 @@ export default function Article({ data, location }) {
         </header>
         <section className={style.preface}>{frontmatter.preface}</section>
         {data.mdx.wordCount.words ? (
-          <section className={style.body}>
-            <MDXRenderer>{data.mdx.body}</MDXRenderer>
-          </section>
+          <Body body={data.mdx.body}/>
         ) : (
           <div className={style.btnbox}>
             <div className={style.pdfbtn}>
@@ -143,6 +158,21 @@ export const query = graphql`
       body
       wordCount {
         words
+      }
+    }
+    site {
+      siteMetadata {
+        categoryColor {
+          blog
+          ila
+          lst
+          mct
+          oth
+          ses
+          soc
+          soe
+          sos
+        }
       }
     }
   }
