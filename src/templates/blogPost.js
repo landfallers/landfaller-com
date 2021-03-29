@@ -6,7 +6,7 @@ import { graphql, Link } from "gatsby";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
 import { RelatedArticle} from "../components/relatedarticle";
-import { MDXRenderer } from "gatsby-plugin-mdx";
+import { Body } from "../components/bodytext.js";
 export default function Article({ data, location }) {
   const { frontmatter } = data.mdx;
   return (
@@ -39,9 +39,7 @@ export default function Article({ data, location }) {
           </div>
         </header>
         <hr className={style.bar} />
-        <section className={style.body}>
-          <MDXRenderer>{data.mdx.body}</MDXRenderer>
-        </section>
+        <Body body={data.mdx.body}/>
       </article>
       <RelatedArticle />
     </Layout>

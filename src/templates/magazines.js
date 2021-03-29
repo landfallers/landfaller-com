@@ -39,7 +39,7 @@ export const query = graphql`
         sourceInstanceName: { eq: "magazines" }
         internal: { mediaType: { eq: "text/mdx" } }
       }
-      sort: { fields: childrenMdx___frontmatter___vol, order: DESC }
+      sort: { fields: childMdx___frontmatter___vol, order: DESC }
       skip: $skip
       limit: $limit
     ) {
