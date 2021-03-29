@@ -85,8 +85,7 @@ export function Aside() {
     <div className={style.wrapper}>
       <div className={style.box}>
         <h2 className={style.title}>
-            <CategoryIcon className={style.categoryicon}/>
-        
+          <CategoryIcon className={style.categoryicon} />
           &nbsp;学院から探す
         </h2>
         {categorys.map(({ title, color, url }) => (
@@ -105,7 +104,11 @@ export function Aside() {
           &ensp;タグ
         </h2>
         {tags.map((node) => (
-          <Link to={`/tags/${node.fieldValue}/`} className={style.tags} key={`aside-${node.fieldValue}`}>
+          <Link
+            to={`/tags/${node.fieldValue}/`}
+            className={style.tags}
+            key={`aside-${node.fieldValue}`}
+          >
             {node.fieldValue}
           </Link>
         ))}
