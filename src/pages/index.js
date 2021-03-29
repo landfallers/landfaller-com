@@ -151,7 +151,7 @@ const IndexPage = ({ location }) => {
             </div>
             <div className={style.two}>
               <p>
-                あなたもLANDFALLに入って一緒に活動しませんか。LANFALLは部員を募集しています。いつでもどなたでも大歓迎いたします。
+                あなたもLANDFALLに入って一緒に活動しませんか。LANDFALLは部員を募集しています。いつでもどなたでも大歓迎いたします。
               </p>
               <Link to={`/category/新歓`} className={style.btn}>
                 <Button variant="outline-light" size="lg">
