@@ -14,10 +14,10 @@ export default function Article({ data, location }) {
   const image = getImage(frontmatter.facephoto);
   return (
     <Layout>
-          <SEO
-      pagetitle={frontmatter.title}
-      pagedesc={frontmatter.preface}
-      pagepath={location.pathname}
+      <SEO
+        pagetitle={frontmatter.title}
+        pagedesc={frontmatter.preface}
+        pagepath={location.pathname}
       />
       <article className={style.contentwrapper}>
         <header>
@@ -31,7 +31,9 @@ export default function Article({ data, location }) {
                   style={{ background: "#aa5465" }}
                 />
                 <div className={style.categorytype}>
-                  <Link to={`/category/${frontmatter.category}`}>{frontmatter.category}</Link>
+                  <Link to={`/category/${frontmatter.category}`}>
+                    {frontmatter.category}
+                  </Link>
                   <span className={style.slash} />
                   {frontmatter.url ? (
                     <a href={frontmatter.url}>
@@ -49,15 +51,23 @@ export default function Article({ data, location }) {
                     style={{ color: "rgba(0,0,0,0.6)", marginRight: "8px" }}
                   />
                   {frontmatter.tags.map((tag) => (
-                    <Link to={`/tags/${tag}`} className={style.tag} key={`magazinepost-${tag}`}>
+                    <Link
+                      to={`/tags/${tag}`}
+                      className={style.tag}
+                      key={`magazinepost-${tag}`}
+                    >
                       {tag}
                     </Link>
                   ))}
                 </div>
-
                 {data.mdx.wordCount.words ? (
-                  <div className={style.pdfbox}>
-                    <a href={frontmatter.pdf.publicURL}>pdfで読む</a>
+                  <div className={style.pdfbtn}>
+                    <Button
+                      variant="outline-success"
+                      href={frontmatter.pdf.publicURL}
+                    >
+                      PDFで読む
+                    </Button>
                   </div>
                 ) : (
                   ``
