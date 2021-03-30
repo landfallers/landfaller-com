@@ -6170,6 +6170,14 @@ gatsby-plugin-google-analytics@^3.1.0:
     "@babel/runtime" "^7.12.5"
     minimatch "3.0.4"
 
+gatsby-plugin-google-gtag@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-3.1.0.tgz#ab564a1ae4e6a0e106d5ff4b0c33c17130122ac9"
+  integrity sha512-iGxvZXXTEf4a4X5WF9xqHdc9HJFQkwLCl/Kxthxc/C8J0IpGfPrEfbIyzQtHEXyt93X3OBSyadbsU7tkQMJseg==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
+    minimatch "^3.0.4"
+
 gatsby-plugin-image@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-image/-/gatsby-plugin-image-1.0.1.tgz#b2b46ec7b2203c05b3511e1440100bcd3d2af68a"
