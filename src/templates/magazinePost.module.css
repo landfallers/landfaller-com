@@ -50,6 +50,10 @@
   word-break: break-all;
 }
 
+.url {
+  text-decoration: underline;
+}
+
 .laboname {
   box-sizing: inherit;
 }
