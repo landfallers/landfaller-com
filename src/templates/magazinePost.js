@@ -53,7 +53,7 @@ export default function Article({ data, location }) {
                   </Link>
                   <span className={style.slash} />
                   {frontmatter.url ? (
-                    <a href={frontmatter.url}>
+                    <a href={frontmatter.url} className={style.url}>
                       {frontmatter.interviewee} 研究室
                     </a>
                   ) : (
@@ -62,7 +62,7 @@ export default function Article({ data, location }) {
                 </div>
               </div>
               <div>
-                {frontmatter.tags.length != 0 ? (
+                {frontmatter.tags.length !== 0 ? (
                   <div className={style.tagbox}>
                     <FontAwesomeIcon
                       icon={faTags}
