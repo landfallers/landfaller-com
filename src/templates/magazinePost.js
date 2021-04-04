@@ -62,21 +62,26 @@ export default function Article({ data, location }) {
                 </div>
               </div>
               <div>
-                <div className={style.tagbox}>
-                  <FontAwesomeIcon
-                    icon={faTags}
-                    style={{ color: "rgba(0,0,0,0.6)", marginRight: "8px" }}
-                  />
-                  {frontmatter.tags.map((tag) => (
-                    <Link
-                      to={`/tags/${tag}`}
-                      className={style.tag}
-                      key={`magazinepost-${tag}`}
-                    >
-                      {tag}
-                    </Link>
-                  ))}
-                </div>
+                {frontmatter.tags.length != 0 ? (
+                  <div className={style.tagbox}>
+                    <FontAwesomeIcon
+                      icon={faTags}
+                      style={{ color: "rgba(0,0,0,0.6)", marginRight: "8px" }}
+                    />
+                    {frontmatter.tags.map((tag) => (
+                      <Link
+                        to={`/tags/${tag}`}
+                        className={style.tag}
+                        key={`magazinepost-${tag}`}
+                      >
+                        {tag}
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  ``
+                )}
+
                 {data.mdx.wordCount.words ? (
                   <div className={style.pdfbtn}>
                     <Button
@@ -110,7 +115,7 @@ export default function Article({ data, location }) {
         </header>
         <section className={style.preface}>{frontmatter.preface}</section>
         {data.mdx.wordCount.words ? (
-          <Body body={data.mdx.body}/>
+          <Body body={data.mdx.body} />
         ) : (
           <div className={style.btnbox}>
             <div className={style.pdfbtn}>
