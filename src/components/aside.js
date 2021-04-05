@@ -80,7 +80,7 @@ export function Aside() {
     if (a.totalCount < b.totalCount) return 1;
     if (a.totalCount > b.totalCount) return -1;
     return 0;
-  });
+  }).filter(tag => tag.totalCount > 3);
   return (
     <div className={style.wrapper}>
       <div className={style.box}>
@@ -109,7 +109,7 @@ export function Aside() {
             className={style.tags}
             key={`aside-${node.fieldValue}`}
           >
-            {node.fieldValue}
+            {node.fieldValue}({node.totalCount})
           </Link>
         ))}
       </div>

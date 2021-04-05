@@ -72,7 +72,7 @@ export function ListItem(props) {
       </h2>
       <footer className={style.footerbox}>
         <div>
-          {items.tags.length != 0 ? (
+          {items.tags.length !== 0 ? (
             <div className={style.tagbox}>
               <FontAwesomeIcon
                 icon={faTags}

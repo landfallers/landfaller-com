@@ -29,6 +29,17 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-catch-links",
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-6HGFXL5J96",
+        ],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `LANDFALL|東京工業大学生協学生委員会`,
