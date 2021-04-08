@@ -50,6 +50,7 @@ export const query = graphql`
             tags
             category
             interviewee
+            pdfurl
             pdf {
               publicURL
             }
