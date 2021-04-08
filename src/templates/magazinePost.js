@@ -81,7 +81,6 @@ export default function Article({ data, location }) {
                 ) : (
                   ``
                 )}
-
                 {data.mdx.wordCount.words ? (
                   <div className={style.pdfbtn}>
                     <Button
@@ -122,7 +121,7 @@ export default function Article({ data, location }) {
               <Button
                 variant="outline-info"
                 size="lg"
-                href={frontmatter.pdf.publicURL}
+                href={`https://landfallers.github.io/landfaller-com/publication/magazines/${frontmatter.pdfurl}`}
               >
                 PDFで読む
               </Button>
@@ -148,6 +147,7 @@ export const query = graphql`
             )
           }
         }
+        pdfurl
         pdf {
           publicURL
         }

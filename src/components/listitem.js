@@ -100,7 +100,7 @@ export function ListItem(props) {
         </div>
         <div>
           {items.pdf ? (
-            <a href={items.pdf.publicURL} className={style.pdfbox}>
+            <a href={`https://landfallers.github.io/landfaller-com/publication/magazines/${items.pdfurl}`} className={style.pdfbox}>
               <Pdf />
             </a>
           ) : (

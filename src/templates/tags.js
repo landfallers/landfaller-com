@@ -37,7 +37,7 @@ export const query = graphql`
   query($tag: String!, $skip: Int!, $limit: Int!) {
     allMdx(
       filter: { frontmatter: { tags: { eq: $tag } } }
-      sort: { fields: frontmatter___date, order: DESC }
+      sort: { fields: frontmatter___vol, order: DESC }
       skip: $skip
       limit: $limit
     ) {
@@ -50,6 +50,7 @@ export const query = graphql`
             tags
             category
             interviewee
+            pdfurl
             pdf {
               publicURL
             }
