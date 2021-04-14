@@ -31,8 +31,9 @@ const IndexPage = ({ location }) => {
               <strong>WELCOME </strong>
               TO THE <strong> LONGEST </strong>
               ESTABLISHED<strong> PUBLISHING</strong> GROUP IN
-              <strong> TOKYO TECH</strong>.
+              <strong> TOKYO TECH</strong>. 
             </h1>
+
           </div>
           <div className={style.wave}>
             <svg
@@ -68,6 +69,7 @@ const IndexPage = ({ location }) => {
             </p>
           </div>
         </section>
+
         <section className={style.food}>
           <div className={style.container}>
             <h2 className={style.bar}>
