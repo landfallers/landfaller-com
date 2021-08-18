@@ -6,13 +6,14 @@ import { Pagenation } from "../components/pagination";
 import { ListItem } from "../components/listitem";
 import * as style from "./blogs.module.css";
 import { ListHeader } from "../components/listheader";
-export default function blogsList({ data, pageContext,location }) {
+export default function blogsList({ data, pageContext, location }) {
   return (
     <Layout>
       <SEO
       pagetitle="BLOG"
       pagedesc="LANDFALL編集委員会の部員が作成しているブログです。新歓の情報や大学のこと、landfall部員の日常についていろいろ記事にしてみました。"
       pagepath={location.pathname}
+
       />
       <div className={style.wrapper}>
         <ListHeader
