@@ -5,7 +5,6 @@ import { faTags } from "@fortawesome/free-solid-svg-icons";
 import { graphql, Link } from "gatsby";
 import { Layout } from "../components/layout";
 import { SEO } from "../components/seo";
-import { RelatedArticle} from "../components/relatedarticle";
 import { Body } from "../components/bodytext.js";
 export default function Article({ data, location }) {
   const { frontmatter } = data.mdx;
@@ -41,7 +40,6 @@ export default function Article({ data, location }) {
         <hr className={style.bar} />
         <Body body={data.mdx.body}/>
       </article>
-      <RelatedArticle />
     </Layout>
   );
 }

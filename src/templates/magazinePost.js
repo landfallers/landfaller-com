@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags } from "@fortawesome/free-solid-svg-icons";
 import { graphql, Link } from "gatsby";
 import { Layout } from "../components/layout";
-import { RelatedArticle } from "../components/relatedarticle";
 import { Body } from "../components/bodytext.js";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Button } from "react-bootstrap";
@@ -129,7 +128,6 @@ export default function Article({ data, location }) {
           </div>
         )}
       </article>
-      <RelatedArticle />
     </Layout>
   );
 }

@@ -6,7 +6,7 @@ import { ListItem } from "../components/listitem";
 import { SEO } from "../components/seo";
 import * as style from "./category.module.css";
 import { ListHeader } from "../components/listheader";
-export default function blogsList({ data, pageContext, location }) {
+export default function BlogsList({ data, pageContext, location }) {
   return (
     <Layout>
       <SEO 

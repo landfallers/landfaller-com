@@ -6,7 +6,7 @@ import { Pagenation } from "../components/pagination";
 import { ListItem } from "../components/listitem";
 import * as style from "./magazines.module.css";
 import { ListHeader } from "../components/listheader";
-export default function blogsList({ data, pageContext, location }) {
+export default function BlogsList({ data, pageContext, location }) {
   return (
     <Layout>
       <SEO

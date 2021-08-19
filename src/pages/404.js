@@ -3,7 +3,6 @@ import * as style from "./aboutsite.module.css";
 import { graphql } from "gatsby";
 import { SEO } from "../components/seo";
 import { Layout } from "../components/layout";
-import { RelatedArticle } from "../components/relatedarticle";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 export default function AboutSite({ data, location }) {
   const { frontmatter } = data.mdx;
@@ -24,7 +23,6 @@ export default function AboutSite({ data, location }) {
           <MDXRenderer>{data.mdx.body}</MDXRenderer>
         </section>
       </article>
-      <RelatedArticle />
     </Layout>
   );
 }
