@@ -4,8 +4,8 @@ import { Nav, Navbar } from "react-bootstrap";
 import Logo from "../images/logo.svg";
 export function Header() {
   return (
-    <header className="bg-info" style={{height: "50px"}}>
-      <Navbar expand="md" variant="dark" style={{padding: "0.3rem 1rem"}}>
+    <header className="bg-info" >
+      <Navbar expand="sm" variant="dark" style={{padding: "0.3rem 1rem"}}>
         <Navbar.Brand href="/" style={{marginLeft: "15px"}}>
           <div style={{width: "150px"}}>
            <Logo/>
