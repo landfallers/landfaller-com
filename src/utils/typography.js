@@ -1,43 +1,89 @@
 import Typography from "tyjs"
 let theme = {
   baseFontSize: `15px`,
-  headerFontFamily: [`Cooper Hewitt`, `sans-serif`],
-  bodyFontFamily: [`Cooper Hewitt`, `sans-serif`],
-  baseLineHeight: 1.45,
-  blockMarginBottom: 0.85,
+  baseLineHeight: 1.4,
+  scaleRatio: 2.2,
+  headerFontFamily: ["Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "メイリオ"],
+  bodyFontFamily: ["Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro", "Yu Gothic Medium", "游ゴシック Medium", "YuGothic", "游ゴシック体", "メイリオ"],
+  bodyGray: 5,
+  blockMarginBottom: 1.3,
   breakpoints: {
-    "@media screen and (min-width:700px)": {
-      // any valid media query.
-      scaleRatio: 0.5 ,
-      baseLineHeight: 2.5,
-      baseFontSize: "20px"
+    "@media screen and (min-width:800px)": {
+      baseLineHeight: 1.5,
+      baseFontSize: "16px"
     },
-    "@media screen and (min-width:1200px)": {
-      scaleRatio: 3 // Override the 800px scale
-    },
-    "@media screen and (min-width:1500px) and (max-height: 900px)": {
-      baseFontSize: "17px", // Override the default base font size
-      scaleRatio: 4 // Override the 1200px scale
-    }
   },
   overrideThemeStyles: ({ rhythm }) => ({
-    a: {
-      color: `#3A69A8`,
+    ".mdcontent > h1, mdcontent > h2, mdcontent > h3": {
+      marginTop: rhythm(1.2),
+      borderBottom: `1px solid #ddd`,
+      paddingBottom: `0.1em`,
     },
-    blockquote: {
+    "blockquote": {
       marginLeft: 0,
-      paddingLeft: rhythm(5 / 8),
-      borderLeft: `${rhythm(3 / 8)} solid #CDf4f4`,
+      padding: `10px 0 10px ${rhythm(1.4)}`,
+      borderLeft: `${rhythm(3 / 10)} solid rgba(139, 196, 194,0.5)`,
+      color: "rgba(0,0,0,0.6)",
+      letterSpacing: "0.03rem",
     },
     "blockquote > *": {
       fontStyle: `italic`,
+
     },
     "blockquote > h1, blockquote > h2, blockquote > h3, blockquote > h4": {
       marginTop: 0,
     },
-    "li > p": {
-      marginBottom: rhythm(1 / 2),
+    'blockquote > :last-child': {
+      marginBottom: 0,
     },
+    "@media screen and (min-width: 800px)": {
+      "blockquote": {
+        marginLeft: 0,
+        marginBottom: "1.95rem",
+        marginRight: 0,
+      },
+    },
+    "p > strong": {
+      letterSpacing: "0.07rem",
+    },
+    ".mdcontent a": {
+      color: `#3080cf`,
+    },
+    ".mdcontent a:hover": {
+      color: `#3078A0`,
+      textDecoration: `underline`,
+    },
+    "ul li": {
+      marginBottom: `4px`
+    },
+    "table": {
+      borderCollapse: `collapse`,
+      width: `100%`,
+    },
+    "table th:last-child, table th:last-child" : {
+      padding: `8px`,
+    },
+    "table th:first-child, table td:first-child" : {
+      padding: `8px`,
+    },
+    "table td, table th": {
+      border: `1px solid #ddd`,
+      padding: `8px`,
+    },
+    "table tr:nth-child(even)": {
+      backgroundColor: `#f2f2f2`,
+    },
+    "tbody > tr:hover" : {
+      backgroundColor: `#ddd`
+    },
+    "table th": {
+      paddingTop: `12px`,
+      paddingBottom: `12px`,
+      textAlign: `left`,
+      backgroundColor: `rgba(36, 191, 80, 0.7)`,
+      color: `white`,
+    },
+
     "p code": {
       fontSize: "75%",
     },
@@ -47,9 +93,10 @@ let theme = {
     "p del": {
       padding: "0 2px",
     },
-    pre: {
+    "pre": {
       lineHeight: 1.22,
     },
+  
   }),
 }
 

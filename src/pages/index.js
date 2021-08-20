@@ -7,11 +7,11 @@ import * as style from "./index.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import { Button } from "react-bootstrap";
-import { SEO } from "../components/seo";
+import { Seo } from "../components/seo";
 const IndexPage = ({ location }) => {
   return (
     <div className={style.home}>
-      <SEO />
+      <Seo />
       <Header />
       <article>
         <section className={style.top}>

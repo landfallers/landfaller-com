@@ -7,7 +7,7 @@ import { Layout } from "../components/layout";
 import { Body } from "../components/bodytext.js";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Button } from "react-bootstrap";
-import { SEO } from "../components/seo";
+import { Seo } from "../components/seo";
 export default function Article({ data, location }) {
   const { frontmatter } = data.mdx;
   const image = getImage(frontmatter.facephoto);
@@ -30,7 +30,7 @@ export default function Article({ data, location }) {
   const itemCategoryColor = colorCode[key];
   return (
     <Layout>
-      <SEO
+      <Seo
         pagetitle={frontmatter.title}
         pagedesc={frontmatter.preface}
         pagepath={location.pathname}

@@ -62,7 +62,7 @@ export function ListItem(props) {
           </div>
         )}
       </header>
-      <h2>
+      <h2 style={{margin:"0"}}>
         <Link
           to={items.vol ? `/magazines/${props.slug}` : `/blogs/${props.slug}`}
           className={style.title}

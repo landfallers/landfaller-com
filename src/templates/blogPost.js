@@ -4,19 +4,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags } from "@fortawesome/free-solid-svg-icons";
 import { graphql, Link } from "gatsby";
 import { Layout } from "../components/layout";
-import { SEO } from "../components/seo";
+import { Seo } from "../components/seo";
 import { Body } from "../components/bodytext.js";
 export default function Article({ data, location }) {
   const { frontmatter } = data.mdx;
   return (
     <Layout>
-      <SEO
+      <Seo
       pagetitle={frontmatter.title}
       pagedesc={frontmatter.preface}
       pagepath={location.pathname}
       />
       <article className={style.contentwrapper}>
-        <header>
+        <header style={{marginBottom: "40px"}}>
           <div className={style.top}>{frontmatter.date}に投稿</div>
           <h1 className={style.title}>{frontmatter.title}</h1>
           <div className={style.bottom}>
@@ -37,7 +37,7 @@ export default function Article({ data, location }) {
             </div>
           </div>
         </header>
-        <hr className={style.bar} />
+        {/* <hr className={style.bar} /> */}
         <Body body={data.mdx.body}/>
       </article>
     </Layout>

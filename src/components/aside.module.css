@@ -11,7 +11,7 @@
 .title {
   font-size: 1.2rem;
   color: #364e96;
-  margin-bottom: 5px;
+  margin-bottom: 9px;
 }
 .tags {
   font-size: 0.8rem;
@@ -30,7 +30,6 @@
 .categoryicon {
   fill: #364e96;
   width: 1.2rem;
-  margin-bottom: 3px;
 }
 .categorycolor {
   display: inline-block;

@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { Layout } from "../components/layout";
-import { SEO } from "../components/seo";
+import { Seo } from "../components/seo";
 import { Pagenation } from "../components/pagination";
 import { ListItem } from "../components/listitem";
 import * as style from "./magazines.module.css";
@@ -9,7 +9,7 @@ import { ListHeader } from "../components/listheader";
 export default function BlogsList({ data, pageContext, location }) {
   return (
     <Layout>
-      <SEO
+      <Seo
         pagetitle="LANDFALL本誌"
         pagedesc="LANDFALL誌はLANDFALL編集委員会が創設された当初からすべての研究室の記事を書くということを目標に作成してきました。"
         pagepath={location.pathname}
