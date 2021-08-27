@@ -14,11 +14,11 @@ let theme = {
     },
   },
   overrideThemeStyles: ({ rhythm }) => ({
-    ".mdcontent > h1, mdcontent > h2, mdcontent > h3": {
-      marginTop: rhythm(1.2),
-      borderBottom: `1px solid #ddd`,
-      paddingBottom: `0.1em`,
-    },
+    // ".mdcontent > h2" : {
+    //   marginTop: rhythm(1.2),
+    //   borderBottom: `1px solid #ddd`,
+    //   paddingBottom: `0.1em`,
+    // },
     "blockquote": {
       marginLeft: 0,
       padding: `10px 0 10px ${rhythm(1.4)}`,

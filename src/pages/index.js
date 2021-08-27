@@ -164,7 +164,7 @@ const IndexPage = ({ location }) => {
           </div>
         </section>
       </article>
-      <figure>
+      <figure style={{marginBottom: 0}}>
         <StaticImage
           src="../images/footer.png"
           alt=""
