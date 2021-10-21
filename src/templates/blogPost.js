@@ -6,12 +6,10 @@ import { graphql, Link } from "gatsby";
 import { Layout } from "../components/layout";
 import { Seo } from "../components/seo";
 import { Body } from "../components/bodytext.js";
-import Iframely from "../components/iframely.js";
 export default function Article({ data, location }) {
   const { frontmatter } = data.mdx;
   return (
     <Layout>
-      <Iframely/>
       <Seo
       pagetitle={frontmatter.title}
       pagedesc={frontmatter.preface}
