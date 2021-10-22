@@ -70,6 +70,51 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
           },
+          {
+            resolve: require.resolve(`./plugins/gatsby-remark-og-image`),
+            options: {
+              output: {
+                directory: '',
+                fileName: 'thumbnail.png'
+              },
+              image: {
+                width: 1200,
+                height: 630,
+                backgroundImage: './static/base.png'
+              },
+              style: {
+                title: {
+                  fontFamily: 'Noto Sans JP',
+                  fontColor: '#fff',
+                  fontWeight: 'Bold',
+                  fontSize: 64,
+                  paddingTop: 100,
+                  paddingBottom: 200,
+                  paddingLeft: 150,
+                  paddingRight: 150
+                },
+                author: {
+                  fontFamily: 'Noto Sans JP',
+                  fontColor: '#fff',
+                  fontWeight: 'Bold',
+                  fontSize: 42,
+                }
+              },
+              meta: {
+                title: '',
+                author: ''
+              },
+              fontFile: [
+                {
+                  path: require.resolve('./src/assets/fonts/NotoSansJP-Bold.otf'),
+                  family: 'Noto Sans JP',
+                  weight: 'Bold',
+                },
+              ],
+              iconFile: require.resolve('./static/null.png'),
+              timeout: 10000,
+            }
+          }
         ],
       },
     },
