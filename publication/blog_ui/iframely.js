@@ -1,4 +1,5 @@
 import React,{ useEffect } from "react";
+import { Helmet } from "react-helmet";
 export function IframelyLink(props) {
     useEffect(() => {
         if (window && window.iframely) {
@@ -7,6 +8,9 @@ export function IframelyLink(props) {
       }, []);
   return (
     <>
+    <Helmet>
+        <script type="text/javascript" src="https://cdn.iframe.ly/embed.js" />
+    </Helmet>
       <div className="iframely-embed">
         <div
           className="iframely-responsive"
@@ -16,7 +20,6 @@ export function IframelyLink(props) {
         </div>
       </div>
       <div style={{ marginBottom: "10px" }}></div>
-      <script type="text/javascript" src="https://cdn.iframe.ly/embed.js" />
     </>
   );
 }
