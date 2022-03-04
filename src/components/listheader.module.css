@@ -12,10 +12,10 @@
 }
 
 .discriptionBox {
-    margin-top: 20px;
+    margin-top: 5px;
     width:80%;
     align-self: flex-end;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     line-height: 1.4;
 
 }

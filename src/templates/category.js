@@ -3,13 +3,13 @@ import { graphql } from "gatsby";
 import { Layout } from "../components/layout";
 import { Pagenation } from "../components/pagination";
 import { ListItem } from "../components/listitem";
-import { SEO } from "../components/seo";
+import { Seo } from "../components/seo";
 import * as style from "./category.module.css";
 import { ListHeader } from "../components/listheader";
-export default function blogsList({ data, pageContext, location }) {
+export default function BlogsList({ data, pageContext, location }) {
   return (
     <Layout>
-      <SEO 
+      <Seo 
       pagetitle={`CATEGORY: 「${pageContext.category}`}
       pagedesc={`「${pageContext.category}」　カテゴリーの記事。`}
       pagepath={location.pathname}/>
@@ -50,6 +50,7 @@ export const query = graphql`
             tags
             category
             interviewee
+            pdfurl
             pdf {
               publicURL
             }

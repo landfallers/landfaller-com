@@ -1,0 +1,5 @@
+{
+    "name": "gatsby-remark-og-image",
+    "description": "Generate OGP image from article title.",
+    "main": "index.js"
+}

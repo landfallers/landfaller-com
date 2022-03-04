@@ -7,11 +7,11 @@ import * as style from "./index.module.css";
 import { StaticImage } from "gatsby-plugin-image";
 import { Link } from "gatsby";
 import { Button } from "react-bootstrap";
-import { SEO } from "../components/seo";
+import { Seo } from "../components/seo";
 const IndexPage = ({ location }) => {
   return (
     <div className={style.home}>
-      <SEO />
+      <Seo />
       <Header />
       <article>
         <section className={style.top}>
@@ -31,8 +31,9 @@ const IndexPage = ({ location }) => {
               <strong>WELCOME </strong>
               TO THE <strong> LONGEST </strong>
               ESTABLISHED<strong> PUBLISHING</strong> GROUP IN
-              <strong> TOKYO TECH</strong>.
+              <strong> TOKYO TECH</strong>. 
             </h1>
+
           </div>
           <div className={style.wave}>
             <svg
@@ -68,6 +69,7 @@ const IndexPage = ({ location }) => {
             </p>
           </div>
         </section>
+
         <section className={style.food}>
           <div className={style.container}>
             <h2 className={style.bar}>
@@ -162,7 +164,7 @@ const IndexPage = ({ location }) => {
           </div>
         </section>
       </article>
-      <figure>
+      <figure style={{marginBottom: 0}}>
         <StaticImage
           src="../images/footer.png"
           alt=""

@@ -1,10 +1,13 @@
 import React from "react";
 import { MDXRenderer } from "gatsby-plugin-mdx";
-import * as style from "./bodytext.module.css";
+import { MDXProvider } from "@mdx-js/react";
+import * as shortcodes from "../../publication/blog_ui";
 export function Body(props) {
   return (
-    <section className={style.body}>
-      <MDXRenderer>{props.body}</MDXRenderer>
+    <section className={`mdcontent`}>
+      <MDXProvider components={shortcodes}>
+        <MDXRenderer>{props.body}</MDXRenderer>
+      </MDXProvider>
     </section>
   );
 }

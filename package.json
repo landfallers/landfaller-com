@@ -23,6 +23,7 @@
     "@mdx-js/mdx": "^1.6.22",
     "@mdx-js/react": "^1.6.22",
     "bootstrap": "^4.6.0",
+    "catchy-image": "^0.1.6",
     "gatsby": "^3.0.1",
     "gatsby-background-image": "^1.5.0",
     "gatsby-plugin-catch-links": "^3.1.0",
@@ -36,16 +37,23 @@
     "gatsby-plugin-sass": "^4.0.2",
     "gatsby-plugin-sharp": "^3.0.1",
     "gatsby-plugin-sitemap": "^3.0.0",
+    "gatsby-plugin-typography": "^3.12.0",
     "gatsby-remark-copy-linked-files": "^3.1.0",
     "gatsby-remark-images": "^4.0.0",
+    "gatsby-remark-prismjs": "^5.9.0",
     "gatsby-remark-relative-images": "^2.0.2",
     "gatsby-source-filesystem": "^3.0.0",
     "gatsby-transformer-sharp": "^3.0.0",
     "gbimage-bridge": "^0.1.1",
+    "mathjax3-react": "^1.0.12",
+    "prismjs": "^1.24.1",
     "react": "^17.0.1",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.1",
+    "react-embed": "^3.3.3",
     "react-helmet": "^6.1.0",
-    "sass": "^1.32.8"
+    "react-typography": "^0.16.20",
+    "sass": "^1.32.8",
+    "tyjs": "^0.0.2"
   }
 }

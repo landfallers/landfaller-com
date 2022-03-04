@@ -4,11 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTags } from "@fortawesome/free-solid-svg-icons";
 import { graphql, Link } from "gatsby";
 import { Layout } from "../components/layout";
-import { RelatedArticle } from "../components/relatedarticle";
 import { Body } from "../components/bodytext.js";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { Button } from "react-bootstrap";
-import { SEO } from "../components/seo";
+import { Seo } from "../components/seo";
 export default function Article({ data, location }) {
   const { frontmatter } = data.mdx;
   const image = getImage(frontmatter.facephoto);
@@ -31,7 +30,7 @@ export default function Article({ data, location }) {
   const itemCategoryColor = colorCode[key];
   return (
     <Layout>
-      <SEO
+      <Seo
         pagetitle={frontmatter.title}
         pagedesc={frontmatter.preface}
         pagepath={location.pathname}
@@ -81,7 +80,6 @@ export default function Article({ data, location }) {
                 ) : (
                   ``
                 )}
-
                 {data.mdx.wordCount.words ? (
                   <div className={style.pdfbtn}>
                     <Button
@@ -122,7 +120,7 @@ export default function Article({ data, location }) {
               <Button
                 variant="outline-info"
                 size="lg"
-                href={frontmatter.pdf.publicURL}
+                href={`https://landfallers.github.io/landfaller-com/publication/magazines/${frontmatter.pdfurl}`}
               >
                 PDFで読む
               </Button>
@@ -130,7 +128,6 @@ export default function Article({ data, location }) {
           </div>
         )}
       </article>
-      <RelatedArticle />
     </Layout>
   );
 }
@@ -148,6 +145,7 @@ export const query = graphql`
             )
           }
         }
+        pdfurl
         pdf {
           publicURL
         }

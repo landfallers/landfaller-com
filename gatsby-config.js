@@ -31,9 +31,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-gtag`,
       options: {
-        trackingIds: [
-          "G-6HGFXL5J96",
-        ],
+        trackingIds: ["G-6HGFXL5J96"],
         pluginConfig: {
           head: true,
         },
@@ -48,8 +46,8 @@ module.exports = {
         background_color: `#e9e9e9`,
         theme_color: `#477294`,
         display: `standalone`,
-        icon: `src/images/icon.png`
-      }
+        icon: `src/images/icon.png`,
+      },
     },
     {
       resolve: `gatsby-plugin-mdx`,
@@ -60,13 +58,61 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 700,
+              maxWidth: 500,
             },
           },
           {
             resolve: `gatsby-remark-copy-linked-files`,
             options: {
               ignoreFileExtensions: [`png`, `jpg`, `jpeg`, `bmp`, `tiff`],
+            },
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+          },
+          {
+            resolve: require.resolve(`./plugins/gatsby-remark-og-image`),
+            options: {
+              output: {
+                directory: '',
+                fileName: 'thumbnail.png'
+              },
+              image: {
+                width: 1200,
+                height: 630,
+                backgroundImage: './static/base.png'
+              },
+              style: {
+                title: {
+                  fontFamily: 'Noto Sans JP',
+                  fontColor: '#fff',
+                  fontWeight: 'Bold',
+                  fontSize: 64,
+                  paddingTop: 100,
+                  paddingBottom: 200,
+                  paddingLeft: 150,
+                  paddingRight: 150
+                },
+                author: {
+                  fontFamily: 'Noto Sans JP',
+                  fontColor: '#fff',
+                  fontWeight: 'Bold',
+                  fontSize: 42,
+                }
+              },
+              meta: {
+                title: '',
+                author: ''
+              },
+              fontFile: [
+                {
+                  path: require.resolve('./src/assets/fonts/NotoSansJP-Bold.otf'),
+                  family: 'Noto Sans JP',
+                  weight: 'Bold',
+                },
+              ],
+              iconFile: require.resolve('./static/null.png'),
+              timeout: 10000,
             }
           }
         ],
@@ -76,9 +122,15 @@ module.exports = {
       resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
-          include: /images/ 
-        }
-      }
+          include: /images/,
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
