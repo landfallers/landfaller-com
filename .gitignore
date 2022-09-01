@@ -3,3 +3,4 @@ node_modules/
 public
 .env
 .vs
+.DS_store
